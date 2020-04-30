@@ -11,6 +11,8 @@
     <!-- Bootstrap CSS -->
     <!-- including css class provided by bootstrap in our project-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!--adding external css file in project-->
+    <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -19,7 +21,8 @@
     <!--for setting page apart from rest of the page-->
     <header class="jumbotron">
         <div class="container">
-            <div class="row">
+            <!--added custom row-header defined in custv-->
+            <div class="row row-header">
                 <!--all columns for extra small and 6 columns for more than that-->
                 <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
@@ -35,7 +38,9 @@
     <!--definig container class to adjust page by itself-->
     <div class="container">
         <!--for appying row wise container inside another-->
-        <div class="row">
+        <!--added custom css file row-content-->
+        <!--align-center for positioning content in center of the row, in vertical direction-->
+        <div class="row row-content align-items-center">
             <!--order last will make it display right  side of screen-->
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -49,7 +54,7 @@
         </div>
 
 
-        <div class="row">
+        <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
@@ -59,7 +64,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
@@ -71,13 +76,14 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="row"> 
                 <!--offset here is left one column will be assigned to it-->            
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
-                    <ul>
+                    <!--list-unstyled is for removing bullets from list-->
+                    <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
@@ -95,8 +101,9 @@
 		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
-                <div class="col-12 col-sm-4"> 
-                    <div>
+                <!--for aligning content to center vertically using self-center-->
+                <div class="col-12 col-sm-4 align-self-center"> 
+                    <div class="text-center">
                         <a href="http://google.com/+">Google+</a>
                         <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
                         <a href="http://www.linkedin.com/in/">LinkedIn</a>
@@ -106,7 +113,8 @@
                     </div>
                 </div>
            </div>
-           <div class="row">       
+           <!--for horizontal positioning(justify-content-center-->
+           <div class="row justify-content-center">       
                <!--will occupy enough columns as required by content-->      
                 <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
