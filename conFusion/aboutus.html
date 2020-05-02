@@ -21,6 +21,30 @@
 
 <body>
 
+    <!--nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top"-->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <!--this button is for colla[e of navbar on small screens-->
+            <!--target is content that will be hiden on small screens, here NavBar is the container-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <!--for three line icon-->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--brand allows to display information as branding(logo), it is linked to homepage-->
+            <a class="navbar-brand mr-auto" href="./index.html">Ristorante Con Fusion</a>
+            <!--id of this div is used in button target-->
+            <div class="collapse navbar-collapse" id="Navbar">
+                <!--for linkes in navbar, mr-auto is to define right margin(content pushed as left as possible-->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>   
+            </div>         
+        </div>
+    </nav>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -36,6 +60,11 @@
 
     <div class="container">
         <div class="row row-header">
+            <!--adding breadcrumbs-->
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active">About Us</li>
+            </ol>
             <div class="col-12">
                <h3>About Us</h3>
                <hr>
@@ -76,7 +105,7 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
@@ -107,11 +136,16 @@
            <div class="row justify-content-center">             
                 <div class="col-auto">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
-                </div>
-           </div>
+            </div>
         </div>
+    </div>
     </footer>
-    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!--it added in end, to load these files at last after everything loaded-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <!--including jquery and popper both first as bootstrap is dependent on both in same order also-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
