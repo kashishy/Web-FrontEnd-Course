@@ -64,3 +64,11 @@ body{
     left: 0;
     min-height: 300px;
 }
+
+/*for position pause button to right and at buttom, # for id of the code part*/
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
