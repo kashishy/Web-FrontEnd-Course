@@ -471,6 +471,8 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <!--including jquery and popper both first as bootstrap is dependent on both in same order also-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--including script code from scripts file-->
+    <script src="js/scripts.js"></script>
     <!--<script>
         /*when this document is ready to invoke*/
         $(document).ready(function(){
@@ -479,7 +481,7 @@
         });
     </script-->
     <!--Finally we add the following JavaScript code to activate the buttons-->
-    <script>
+    <!--script>
         /*single paus and play button*/
         $("#carouselButton").click(function(){
             if ($("#carouselButton").children("span").hasClass('fa-pause')) {
@@ -493,6 +495,13 @@
                 $("#carouselButton").children("span").addClass('fa-pause');                    
             }
         });
+
+        $("#reserveTable").click(function(){
+            $('#reserveModal').modal('toggle');
+        });
+        $("#loginButton").click(function(){
+            $('#loginModal').modal('toggle');
+        });
         /*here selector is current document*
         $(document).ready(function(){
             $("#mycarousel").carousel( { interval: 2000 } );
@@ -503,18 +512,7 @@
                 $("#mycarousel").carousel('cycle');
             });
         });*/
-    </script>
-    <script>
-        $("#reserveTable").click(function(){
-            $('#reserveModal').modal('toggle');
-        });
-    </script>
-    <script>
-        $("#loginButton").click(function(){
-            $('#loginModal').modal('toggle');
-        });
-
-    </script>
+    </script-->
 </body>
 
 </html>
